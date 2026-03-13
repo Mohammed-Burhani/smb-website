@@ -1,0 +1,53 @@
+import Image from "next/image";
+
+export default function AboutSection() {
+  return (
+    <section className="w-full bg-white py-20">
+      <div className="px-8 lg:px-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left - Image */}
+          <div className="relative">
+            <div className="relative h-[400px] lg:h-[500px] w-full">
+              {/* Placeholder for factory image */}
+              <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
+                <div className="text-gray-400 text-center">
+                  <svg className="w-32 h-32 mx-auto" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                  </svg>
+                  <p className="mt-4 text-sm">Factory/Warehouse Image</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right - Content */}
+          <div className="space-y-6">
+            {/* Heading */}
+            <div>
+              <h2 className="text-5xl lg:text-6xl font-bold uppercase tracking-wide mb-2" style={{
+                WebkitTextStroke: '2px #d1d5db',
+                color: 'transparent'
+              }}>
+                ABOUT
+              </h2>
+              <h3 className="text-3xl lg:text-4xl font-bold text-[#1e2a4a] uppercase">
+                SMB FITTING INDUSTRY
+              </h3>
+            </div>
+
+            {/* Description */}
+            <div className="space-y-4 text-gray-600 leading-relaxed">
+              <p>
+                SMB Fitting Industry is a Chennai-based manufacturer and supplier specializing in mild steel elbows, pipe fittings, and structural steel components. With a strong focus on quality, reliability, and customer satisfaction, we support construction, fabrication, and industrial sectors with consistent product standards.
+              </p>
+              
+              <p>
+                Our commitment to dependable service and local accessibility makes us a preferred steel fitting partner in Tondiarpet and surrounding industrial areas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
