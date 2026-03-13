@@ -1,4 +1,6 @@
-import Image from "next/image";
+import SectionTitle from "./SectionTitle";
+import { colors } from "../styles/colors";
+import { typography } from "../styles/typography";
 
 export default function AboutSection() {
   return (
@@ -22,26 +24,19 @@ export default function AboutSection() {
 
           {/* Right - Content */}
           <div className="space-y-6">
-            {/* Heading */}
-            <div>
-              <h2 className="text-5xl lg:text-6xl font-bold uppercase tracking-wide mb-2" style={{
-                WebkitTextStroke: '2px #d1d5db',
-                color: 'transparent'
-              }}>
-                ABOUT
-              </h2>
-              <h3 className="text-3xl lg:text-4xl font-bold text-[#1e2a4a] uppercase">
-                SMB FITTING INDUSTRY
-              </h3>
-            </div>
+            <SectionTitle 
+              outlinedText="ABOUT"
+              solidText="SMB FITTING INDUSTRY"
+              align="left"
+            />
 
             {/* Description */}
-            <div className="space-y-4 text-gray-600 leading-relaxed">
-              <p>
+            <div className="space-y-4" style={{ color: colors.secondary }}>
+              <p className={typography.body}>
                 SMB Fitting Industry is a Chennai-based manufacturer and supplier specializing in mild steel elbows, pipe fittings, and structural steel components. With a strong focus on quality, reliability, and customer satisfaction, we support construction, fabrication, and industrial sectors with consistent product standards.
               </p>
               
-              <p>
+              <p className={typography.body}>
                 Our commitment to dependable service and local accessibility makes us a preferred steel fitting partner in Tondiarpet and surrounding industrial areas.
               </p>
             </div>
