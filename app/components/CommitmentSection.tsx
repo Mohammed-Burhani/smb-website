@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionTitle from "./SectionTitle";
 import { Body } from "./Typography";
 
@@ -15,16 +16,14 @@ export default function CommitmentSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left - Image */}
           <div className="relative">
-            <div className="relative h-[400px] lg:h-[500px] w-full">
-              {/* Placeholder for quality control image */}
-              <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
-                <div className="text-gray-400 text-center">
-                  <svg className="w-32 h-32 mx-auto" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
-                  </svg>
-                  <p className="mt-4 text-sm">Quality Control Image</p>
-                </div>
-              </div>
+            <div className="relative h-[400px] lg:h-[500px] w-full rounded-lg overflow-hidden">
+              <Image 
+                src="/home/commitment.png" 
+                alt="Quality Control and Infrastructure"
+                width={1000}
+                height={1000}
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 
@@ -44,7 +43,7 @@ export default function CommitmentSection() {
               {commitments.map((item, index) => (
                 <li key={index} className="flex items-start">
                   <span 
-                    className="mr-3 mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" 
+                    className="mr-3 mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" 
                     style={{ backgroundColor: '#151C50' }} 
                   />
                   <Body className="m-0">

@@ -27,15 +27,15 @@ export default function CTASection({
       )}
       
       {/* Fallback gradient background */}
-      {!backgroundImage && (
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1a2850] to-[#0d1428]" />
-      )}
+      {/* {!backgroundImage && (
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1a2850]/10 to-[#0d1428]/10" />
+      )} */}
       
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-[#151C50]/80" />
+      {/* <div className="absolute inset-0 bg-[#151C50]/10" /> */}
       
       {/* Blurred background effect */}
-      <div className="absolute inset-0 backdrop-blur-sm" />
+      {/* <div className="absolute inset-0 backdrop-blur-sm" /> */}
       
       {/* Content */}
       <div className="relative px-8 lg:px-16 text-center">

@@ -19,6 +19,7 @@ export default function Home() {
       <CTASection 
         title="LOOKING FOR RELIABLE STEEL FITTINGS SUPPLIER IN CHENNAI?"
         description="Partner with SMB Fitting Industry for quality products and dependable service."
+        backgroundImage="/home/cta.png"
       />
       <Footer />
     </div>

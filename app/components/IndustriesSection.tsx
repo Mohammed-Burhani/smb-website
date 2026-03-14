@@ -1,26 +1,27 @@
+import Image from "next/image";
 import SectionTitle from "./SectionTitle";
 
 export default function IndustriesSection() {
   const industries = [
     {
       name: "CONSTRUCTION",
-      image: "/industries/construction.jpg",
+      image: "/home/construction.png",
     },
     {
       name: "OIL & GAS",
-      image: "/industries/oil-gas.jpg",
+      image: "/home/oil-gas.png",
     },
     {
       name: "FABRICATION",
-      image: "/industries/fabrication.jpg",
+      image: "/home/fabrication.png",
     },
     {
       name: "INFRASTRUCTURE",
-      image: "/industries/infrastructure.jpg",
+      image: "/home/infrastructure.png",
     },
     {
       name: "ENGINEERING",
-      image: "/industries/engineering.jpg",
+      image: "/home/engineering.png",
     },
   ];
 
@@ -42,23 +43,23 @@ export default function IndustriesSection() {
           <div className="grid md:grid-cols-3 gap-6 mb-6">
             {industries.slice(0, 3).map((industry, index) => (
               <div
-                key={index}
-                className="relative h-32 rounded-2xl overflow-hidden group cursor-pointer"
+                key={`top-${index}`}
+                className="relative h-40 rounded-3xl overflow-hidden group cursor-pointer shadow-lg"
               >
-                {/* Background Image Placeholder */}
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-600 to-gray-800">
-                  <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                    <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
-                    </svg>
-                  </div>
-                </div>
+                {/* Background Image */}
+                <Image 
+                  src={industry.image} 
+                  alt={industry.name}
+                  width={1000}
+                  height={1000}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
                 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
+                <div className="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-colors z-10" />
                 
                 {/* Text */}
-                <div className="absolute inset-0 flex items-center justify-center">
+                <div className="absolute inset-0 flex items-center justify-center z-20">
                   <h4 className="text-white text-xl lg:text-2xl font-bold tracking-wide">
                     {industry.name}
                   </h4>
@@ -68,27 +69,26 @@ export default function IndustriesSection() {
           </div>
 
           {/* Bottom Row - 2 cards centered */}
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="md:col-start-1 md:col-end-2" />
+          <div className="flex justify-center gap-6">
             {industries.slice(3, 5).map((industry, index) => (
               <div
-                key={index}
-                className="relative h-32 rounded-2xl overflow-hidden group cursor-pointer"
+                key={`bottom-${index}`}
+                className="relative h-40 w-full md:w-[calc(33.333%-0.75rem)] rounded-3xl overflow-hidden group cursor-pointer shadow-lg"
               >
-                {/* Background Image Placeholder */}
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-600 to-gray-800">
-                  <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                    <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
-                    </svg>
-                  </div>
-                </div>
+                {/* Background Image */}
+                <Image 
+                  src={industry.image} 
+                  alt={industry.name}
+                  width={1000}
+                  height={1000}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
                 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
+                <div className="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-colors z-10" />
                 
                 {/* Text */}
-                <div className="absolute inset-0 flex items-center justify-center">
+                <div className="absolute inset-0 flex items-center justify-center z-20">
                   <h4 className="text-white text-xl lg:text-2xl font-bold tracking-wide">
                     {industry.name}
                   </h4>

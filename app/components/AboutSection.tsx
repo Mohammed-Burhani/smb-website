@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionTitle from "./SectionTitle";
 import { Body } from "./Typography";
 
@@ -8,16 +9,14 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left - Image */}
           <div className="relative">
-            <div className="relative h-[400px] lg:h-[500px] w-full">
-              {/* Placeholder for factory image */}
-              <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
-                <div className="text-gray-400 text-center">
-                  <svg className="w-32 h-32 mx-auto" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
-                  </svg>
-                  <p className="mt-4 text-sm">Factory/Warehouse Image</p>
-                </div>
-              </div>
+            <div className="relative h-[400px] lg:h-[500px] w-full rounded-lg overflow-hidden">
+              <Image 
+                src="/home/about.png" 
+                alt="SMB Fitting Industry Factory"
+                width={1000}
+                height={1000}
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 

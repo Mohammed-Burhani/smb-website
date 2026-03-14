@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import SectionTitle from "./SectionTitle";
 import { H6, BodySmall } from "./Typography";
 
@@ -7,17 +8,17 @@ export default function ProductsSection() {
     {
       title: "MILD STEEL ELBOWS",
       description: "High-strength MS elbows designed for structural and pipeline applications.",
-      image: "/products/elbows.jpg",
+      image: "/home/prod-1.png",
     },
     {
       title: "MS PIPE FITTINGS",
       description: "Comprehensive range of couplings, bends, reducers and connectors.",
-      image: "/products/fittings.jpg",
+      image: "/home/prod-2.png",
     },
     {
       title: "STEEL PIPES & SECTIONS",
       description: "Reliable steel pipes and square sections for industrial fabrication.",
-      image: "/products/pipes.jpg",
+      image: "/home/prod-3.png",
     },
   ];
 
@@ -41,13 +42,14 @@ export default function ProductsSection() {
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
             >
               {/* Product Image */}
-              <div className="relative h-64 bg-gray-200 flex items-center justify-center">
-                <div className="text-gray-400 text-center">
-                  <svg className="w-24 h-24 mx-auto" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
-                  </svg>
-                  <p className="mt-2 text-xs">Product Image</p>
-                </div>
+              <div className="relative  bg-gray-200 overflow-hidden">
+                <Image 
+                  src={product.image} 
+                  alt={product.title}
+                  width={1000}
+                  height={1000}
+                  className="w-full  object-contain"
+                />
               </div>
 
               {/* Product Info */}
