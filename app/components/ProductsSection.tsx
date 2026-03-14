@@ -42,13 +42,13 @@ export default function ProductsSection() {
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
             >
               {/* Product Image */}
-              <div className="relative  bg-gray-200 overflow-hidden">
+              <div className="relative h- bg-gray-200 overflow-hidden">
                 <Image 
                   src={product.image} 
                   alt={product.title}
                   width={1000}
                   height={1000}
-                  className="w-full  object-contain"
+                  className="w-full h- object-contain"
                 />
               </div>
 

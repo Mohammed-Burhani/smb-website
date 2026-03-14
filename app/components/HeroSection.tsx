@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { H1 } from "./Typography";
 
 export default function HeroSection() {
   const features = [
@@ -28,9 +29,9 @@ export default function HeroSection() {
   return (
     <section className="relative w-full">
       {/* Hero Background with Image */}
-      <div className="relative w-full h-[600px] bg-gradient-to-r from-gray-100 to-gray-200">
+      <div className="relative w-full h-[600px]">
         {/* Background Image */}
-        <div className="absolute inset-0 opacity-40">
+        <div className="absolute inset-0">
           <Image
             src="/home/banner.png"
             alt="Steel fittings and elbows"
@@ -42,11 +43,11 @@ export default function HeroSection() {
         </div>
         
         {/* Hero Content */}
-        <div className="relative h-full px-8 lg:px-16 flex items-center">
-          <div className="w-full lg:w-1/2 space-y-6">
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight" style={{ color: '#151C50' }}>
+        <div className="relative h-full px-8 lg:px-16 flex items-center w-full">
+          <div className="w-full 2xl:max-w-6xl space-y-6">
+            <H1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
               EXCLUSIVE CUSTOM-MADE SEAMLESS MS ELBOWS & FITTINGS
-            </h1>
+            </H1>
             
             <p className="text-lg lg:text-xl font-semibold" style={{ color: '#151C50' }}>
               Trusted Manufacturer & Supplier in Chennai for Industrial Applications

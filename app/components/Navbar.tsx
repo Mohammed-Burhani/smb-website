@@ -35,7 +35,7 @@ export default function Navbar() {
                 href={link.href}
                 style={{ 
                   color: index === 0 ? '#151C50' : '#2E3887',
-                  borderColor: index === 0 ? '#D1D5DB' : 'transparent'
+                  borderColor: index === 0 ? '#2E3887' : 'transparent'
                 }}
                 className={`px-5 py-2.5 text-base font-medium transition-colors ${
                   index === 0

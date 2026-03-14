@@ -16,9 +16,9 @@ export default function Footer() {
   return (
     <footer className="w-full bg-white border-t border-gray-200">
       <div className="px-8 lg:px-16 py-12">
-        <div className="grid md:grid-cols-3 gap-12 items-start">
+        <div className="grid md:grid-cols-3 gap-12 max-w-7xl mx-auto">
           {/* Left - Logo and Description */}
-          <div className="space-y-4">
+          <div className="space-y-4 text-center md:text-left">
             <Link href="/" className="inline-block">
               <Image
                 src="/logo.svg"
@@ -28,22 +28,22 @@ export default function Footer() {
                 className="h-14 w-auto"
               />
             </Link>
-            <Body className="text-sm leading-relaxed max-w-xs">
+            <p className="text-sm leading-relaxed" style={{ color: 'var(--color-secondary)' }}>
               Precision steel pipe fittings manufacturer and supplier in Tondiarpet, Chennai, specializing in mild steel elbows and industrial pipe fittings with reliable quality and service.
-            </Body>
+            </p>
           </div>
 
-          {/* Middle - Quick Links (Centered) */}
+          {/* Middle - Quick Links */}
           <div className="text-center">
-            <h4 className="text-lg font-bold mb-4 uppercase" style={{ color: 'var(--color-primary)' }}>
+            <h4 className="text-base font-bold mb-6 uppercase tracking-wide" style={{ color: 'var(--color-primary)' }}>
               Quick Links
             </h4>
-            <ul className="space-y-2 inline-block text-left">
+            <ul className="space-y-2.5">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm transition-colors hover:underline"
+                    className="text-sm transition-colors hover:underline inline-block"
                     style={{ color: 'var(--color-secondary)' }}
                   >
                     {link.name}
@@ -53,35 +53,35 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Right - Contact Info (Right Aligned) */}
-          <div className="text-right">
-            <h4 className="text-lg font-bold mb-4 uppercase" style={{ color: 'var(--color-primary)' }}>
+          {/* Right - Contact Info */}
+          <div className="text-center md:text-right">
+            <h4 className="text-base font-bold mb-6 uppercase tracking-wide" style={{ color: 'var(--color-primary)' }}>
               Contact Info
             </h4>
-            <div className="space-y-3 text-sm inline-block text-left" style={{ color: 'var(--color-secondary)' }}>
-              <p className="leading-relaxed">
-                New No. 404/406, Thiruvottiyur High Road,<br />
-                Tondiarpet, Chennai - 600081,<br />
-                Tamil Nadu, India
-              </p>
+            <div className="space-y-2.5 text-sm inline-block text-left" style={{ color: 'var(--color-secondary)' }}>
+              <Body className="leading-relaxed">
+                <strong>New No. 404/406, Thiruvottiyur High Road,</strong><br />
+                <strong>Tondiarpet, Chennai - 600081,</strong><br />
+                <strong>Tamil Nadu, India</strong>
+              </Body>
               
-              <p>
-                <span className="font-semibold">Phone:</span>{" "}
-                <a href="tel:+919940485711" className="hover:underline">
+              <Body>
+                <strong>Phone:</strong>{" "}
+                <a href="tel:+919940485711" className="hover:underline" style={{ color: 'var(--color-secondary)' }}>
                   +91 99404 85711
                 </a>
-              </p>
+              </Body>
               
-              <p>
-                <span className="font-semibold">Email:</span>{" "}
-                <a href="mailto:smbfitting@gmail.com" className="hover:underline">
+              <Body>
+                <strong>Email:</strong>{" "}
+                <a href="mailto:smbfitting@gmail.com" className="hover:underline" style={{ color: 'var(--color-secondary)' }}>
                   smbfitting@gmail.com
                 </a>
-              </p>
+              </Body>
               
-              <p>
-                <span className="font-semibold">Business Hours:</span> Mon-Sat: 09:00 AM - 06:00 PM
-              </p>
+              <Body>
+                <strong>Business Hours:</strong> Mon-Sat: 09:00 AM - 06:00 PM
+              </Body>
             </div>
           </div>
         </div>
