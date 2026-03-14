@@ -1,26 +1,73 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Brand Colors */
+    --color-primary: #151C50;
+    --color-secondary: #2E3887;
+    --color-light-bg: #F0F4FC;
+    --color-white: #FFFFFF;
+    
+    /* Gray Scale */
+    --color-gray-50: #F9FAFB;
+    --color-gray-100: #F3F4F6;
+    --color-gray-200: #E5E7EB;
+    --color-gray-300: #D1D5DB;
+    --color-gray-600: #4B5563;
+    --color-gray-700: #374151;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    background: #FFFFFF;
+    color: #2E3887;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Typography Styles */
+  h1, h2, h3, h4, h5, h6 {
+    color: #151C50;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  h3 {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+  }
+
+  h4 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+  }
+
+  h5 {
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+  }
+
+  h6 {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+  }
+
+  p {
+    color: #2E3887;
+    line-height: 1.6;
+  }
+
+  a {
+    color: #151C50;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: #2E3887;
+  }
 }

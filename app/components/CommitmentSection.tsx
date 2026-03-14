@@ -1,6 +1,5 @@
 import SectionTitle from "./SectionTitle";
-import { colors } from "../styles/colors";
-import { typography } from "../styles/typography";
+import { Body } from "./Typography";
 
 export default function CommitmentSection() {
   const commitments = [
@@ -37,17 +36,20 @@ export default function CommitmentSection() {
               align="left"
             />
 
-            <p className={typography.body} style={{ color: colors.secondary }}>
+            <Body>
               We maintain strict quality control measures throughout manufacturing and sourcing processes. From material selection to final inspection, every product undergoes dimensional accuracy checks and finishing evaluation to ensure durability and performance.
-            </p>
+            </Body>
 
             <ul className="space-y-3">
               {commitments.map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <span className="mr-3 mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: colors.primary }} />
-                  <span className={typography.body} style={{ color: colors.secondary }}>
+                  <span 
+                    className="mr-3 mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" 
+                    style={{ backgroundColor: '#151C50' }} 
+                  />
+                  <Body className="m-0">
                     {item}
-                  </span>
+                  </Body>
                 </li>
               ))}
             </ul>

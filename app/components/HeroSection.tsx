@@ -62,17 +62,18 @@ export default function HeroSection() {
         {/* Hero Content */}
         <div className="relative h-full px-8 lg:px-16 flex items-center">
           <div className="w-full lg:w-1/2 space-y-6">
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-[#1e2a4a] leading-tight">
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight" style={{ color: '#151C50' }}>
               EXCLUSIVE CUSTOM-MADE SEAMLESS MS ELBOWS & FITTINGS
             </h1>
             
-            <p className="text-lg lg:text-xl text-[#1e2a4a] font-semibold">
+            <p className="text-lg lg:text-xl font-semibold" style={{ color: '#151C50' }}>
               Trusted Manufacturer & Supplier in Chennai for Industrial Applications
             </p>
 
             <Link
               href="/quote"
-              className="inline-block px-8 py-3.5 bg-[#1e2a4a] text-white text-base font-semibold rounded-md hover:bg-[#2d3d5f] transition-colors"
+              className="inline-block px-8 py-3.5 text-white text-base font-semibold rounded-md transition-colors"
+              style={{ backgroundColor: '#151C50' }}
             >
               Get a Quote
             </Link>
@@ -88,13 +89,13 @@ export default function HeroSection() {
               key={index}
               className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow"
             >
-              <div className="text-[#1e2a4a] mb-4 flex justify-center">
+              <div className="mb-4 flex justify-center" style={{ color: '#151C50' }}>
                 {feature.icon}
               </div>
-              <h3 className="text-lg font-bold text-[#1e2a4a] mb-3 text-center">
+              <h3 className="text-lg font-bold mb-3 text-center" style={{ color: '#151C50' }}>
                 {feature.title}
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed text-center">
+              <p className="text-sm leading-relaxed text-center" style={{ color: '#2E3887' }}>
                 {feature.description}
               </p>
             </div>

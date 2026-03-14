@@ -1,6 +1,3 @@
-import { colors } from '../styles/colors';
-import { typography } from '../styles/typography';
-
 interface SectionTitleProps {
   outlinedText: string;
   solidText: string;
@@ -17,15 +14,15 @@ export default function SectionTitle({ outlinedText, solidText, align = 'center'
   return (
     <div className={alignmentClass}>
       <h2 
-        className={`${typography.outlinedTitle} mb-2`}
+        className="text-5xl lg:text-6xl font-bold uppercase tracking-wide mb-2"
         style={{
-          WebkitTextStroke: `1px ${colors.secondary}`,
+          WebkitTextStroke: '1px #2E3887',
           color: 'transparent'
         }}
       >
         {outlinedText}
       </h2>
-      <h3 className={`${typography.subtitle}`} style={{ color: colors.primary }}>
+      <h3 className="text-3xl lg:text-4xl font-bold uppercase" style={{ color: '#151C50' }}>
         {solidText}
       </h3>
     </div>

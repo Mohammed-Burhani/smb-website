@@ -33,10 +33,14 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
+                style={{ 
+                  color: index === 0 ? '#151C50' : '#2E3887',
+                  borderColor: index === 0 ? '#D1D5DB' : 'transparent'
+                }}
                 className={`px-5 py-2.5 text-base font-medium transition-colors ${
                   index === 0
-                    ? "text-[#1e2a4a] border-2 border-gray-300 rounded-md hover:bg-gray-50"
-                    : "text-gray-600 hover:text-[#1e2a4a]"
+                    ? "border-2 rounded-md hover:bg-gray-50"
+                    : "hover:opacity-80"
                 }`}
               >
                 {link.name}
@@ -47,7 +51,8 @@ export default function Navbar() {
           {/* CTA Button */}
           <Link
             href="/quote"
-            className="hidden lg:block px-8 py-3 bg-[#1e2a4a] text-white text-base font-semibold rounded-md hover:bg-[#2d3d5f] transition-colors"
+            className="hidden lg:block px-8 py-3 text-white text-base font-semibold rounded-md transition-colors"
+            style={{ backgroundColor: '#151C50' }}
           >
             Get a Quote
           </Link>

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import SectionTitle from "./SectionTitle";
-import { colors } from "../styles/colors";
-import { typography } from "../styles/typography";
+import { H6, BodySmall } from "./Typography";
 
 export default function ProductsSection() {
   const products = [
@@ -23,7 +22,7 @@ export default function ProductsSection() {
   ];
 
   return (
-    <section className="w-full py-20" style={{ backgroundColor: colors.lightBg }}>
+    <section className="w-full py-20" style={{ backgroundColor: '#F0F4FC' }}>
       <div className="px-8 lg:px-16">
         {/* Heading */}
         <div className="mb-16">
@@ -53,16 +52,15 @@ export default function ProductsSection() {
 
               {/* Product Info */}
               <div className="p-6 space-y-3">
-                <h4 className={`${typography.h6} uppercase`} style={{ color: colors.primary }}>
+                <H6 className="uppercase">
                   {product.title}
-                </h4>
-                <p className={typography.bodySmall} style={{ color: colors.secondary }}>
+                </H6>
+                <BodySmall>
                   {product.description}
-                </p>
+                </BodySmall>
                 <Link
                   href={`/products/${product.title.toLowerCase().replace(/\s+/g, '-')}`}
-                  className={`inline-flex items-center ${typography.buttonSmall} transition-colors`}
-                  style={{ color: colors.primary }}
+                  className="inline-flex items-center text-sm font-semibold transition-colors"
                 >
                   EXPLORE
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,12 +76,8 @@ export default function ProductsSection() {
         <div className="text-center">
           <Link
             href="/products"
-            className={`inline-block px-10 py-3.5 ${typography.button} rounded-lg border-2 transition-colors`}
-            style={{ 
-              backgroundColor: colors.white,
-              color: colors.primary,
-              borderColor: colors.gray[300]
-            }}
+            className="inline-block px-10 py-3.5 text-base font-semibold rounded-lg border-2 transition-colors bg-white"
+            style={{ borderColor: '#D1D5DB', color: '#151C50' }}
           >
             View All Products
           </Link>
