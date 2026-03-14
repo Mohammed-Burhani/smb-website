@@ -6,6 +6,8 @@ interface CTASectionProps {
   description: string;
   buttonText?: string;
   buttonLink?: string;
+  secondaryButtonText?: string;
+  secondaryButtonLink?: string;
   backgroundImage?: string;
 }
 
@@ -14,6 +16,8 @@ export default function CTASection({
   description, 
   buttonText = "Get a Quote",
   buttonLink = "/quote",
+  secondaryButtonText,
+  secondaryButtonLink = "/contact",
   backgroundImage
 }: CTASectionProps) {
   return (
@@ -48,14 +52,22 @@ export default function CTASection({
             {description}
           </BodyLarge>
           
-          <div className="pt-4">
+          <div className="pt-4 flex flex-wrap justify-center gap-4">
             <Link
               href={buttonLink}
               className="inline-block px-10 py-4 bg-white text-base font-semibold rounded-lg transition-all hover:bg-gray-100 hover:shadow-lg"
-              style={{ color: 'var(--color-primary)' }}
+              style={{ color: '#151C50' }}
             >
               {buttonText}
             </Link>
+            {secondaryButtonText && (
+              <Link
+                href={secondaryButtonLink}
+                className="inline-block px-10 py-4 text-base font-semibold rounded-lg border-2 border-white text-white transition-all hover:bg-white/10"
+              >
+                {secondaryButtonText}
+              </Link>
+            )}
           </div>
         </div>
       </div>
