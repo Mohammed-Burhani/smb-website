@@ -13,13 +13,13 @@ export default function LocalPresenceSection() {
             align="center"
           />
 
-          <Body className="text-gray-600 leading-relaxed">
+          <Body className="leading-relaxed">
             Located on Thiruvottiyur High Road in Tondiarpet, SMB Fitting Industry is positioned to
             efficiently serve industrial hubs and construction sites across Chennai. Our proximity
             allows faster response times, flexible order handling, and dependable local distribution.
           </Body>
 
-          <Body className="text-gray-600 leading-relaxed">
+          <Body className="leading-relaxed">
             We understand the urgency of project timelines and prioritize prompt supply to keep
             operations running smoothly.
           </Body>

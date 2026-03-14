@@ -1,6 +1,6 @@
 interface SectionTitleProps {
   outlinedText: string;
-  solidText: string;
+  solidText?: string;
   align?: 'left' | 'center' | 'right';
 }
 
