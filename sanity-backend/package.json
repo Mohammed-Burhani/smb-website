@@ -1,0 +1,14 @@
+{
+  "name": "sanity-backend",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "start": "sanity start",
+    "lint": "eslint"
+  },
+  "description": "",
+  "dependencies": {
+    "styled-components": "^6.3.11"
+  }
+}
