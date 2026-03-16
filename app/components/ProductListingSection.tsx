@@ -2,39 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import SectionTitle from "./SectionTitle";
 import { Body } from "./Typography";
+import type { SanityProductListItem } from "../lib/types";
+import { urlFor } from "../lib/sanity";
 
-const products = [
-  {
-    title: "MILD STEEL ELBOWS",
-    description:
-      "Our mild steel elbows are manufactured for precise pipe direction changes in industrial piping systems and structural installations.",
-    image: "/home/prod-1.png",
-    href: "/products/mild-steel-elbows",
-  },
-  {
-    title: "MS PIPE FITTINGS",
-    description:
-      "We supply a range of MS pipe fittings used in fabrication workshops, construction projects, and industrial pipeline systems.",
-    image: "/home/prod-2.png",
-    href: "/products/ms-pipe-fittings",
-  },
-  {
-    title: "STEEL PIPES & SECTIONS",
-    description:
-      "Durable steel pipes and structural sections used for fabrication, framework construction, and mechanical installations.",
-    image: "/home/prod-3.png",
-    href: "/products/steel-pipes-sections",
-  },
-  {
-    title: "CUSTOM FABRICATED COMPONENTS",
-    description:
-      "We also support customized fabrication requirements based on project specifications and industrial needs.",
-    image: "/home/fabrication.png",
-    href: "/products/custom-fabricated-components",
-  },
-];
+interface Props {
+  products: SanityProductListItem[];
+}
 
-export default function ProductListingSection() {
+export default function ProductListingSection({ products }: Props) {
   return (
     <section className="w-full bg-white py-20">
       <div className="px-8 lg:px-16">
@@ -60,12 +35,12 @@ export default function ProductListingSection() {
 
         {/* Product Grid */}
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {products.map((product, index) => (
-            <div key={index} className="rounded-xl overflow-hidden border border-gray-200 bg-white">
+          {products.map((product) => (
+            <div key={product._id} className="rounded-xl overflow-hidden border border-gray-200 bg-white">
               {/* Image */}
               <div className="relative h-64 w-full bg-gray-100">
                 <Image
-                  src={product.image}
+                  src={urlFor(product.listingImage).width(600).height(400).url()}
                   alt={product.title}
                   fill
                   className="object-cover"
@@ -78,10 +53,10 @@ export default function ProductListingSection() {
                   {product.title}
                 </h3>
                 <Body className="text-gray-600 text-sm leading-relaxed">
-                  {product.description}
+                  {product.listingDescription}
                 </Body>
                 <Link
-                  href={product.href}
+                  href={`/products/${product.slug}`}
                   className="flex items-center justify-center gap-2 w-full py-3 border border-gray-300 rounded-lg text-sm font-semibold transition-colors hover:bg-gray-50"
                   style={{ color: '#151C50' }}
                 >

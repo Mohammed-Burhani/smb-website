@@ -4,8 +4,16 @@ import ApplicationsSection from "../components/ApplicationsSection";
 import CTASection from "../components/CTASection";
 import Footer from "../components/Footer";
 import ProductListingSection from "../components/ProductListingSection";
+import { client } from "../lib/sanity";
+import { productsListQuery } from "../lib/queries";
+import type { SanityProductListItem } from "../lib/types";
 
-export default function ProductsPage() {
+// Revalidate every 60 seconds — picks up Sanity changes without a full rebuild
+export const revalidate = 60;
+
+export default async function ProductsPage() {
+  const products: SanityProductListItem[] = await client.fetch(productsListQuery);
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -15,7 +23,7 @@ export default function ProductsPage() {
         solidText="RANGE"
         subtitle="Reliable Mild Steel Fittings & Structural Components"
       />
-      <ProductListingSection />
+      <ProductListingSection products={products} />
       <ApplicationsSection />
       <CTASection
         title="LOOKING FOR STEEL FITTINGS FOR YOUR PROJECT?"
