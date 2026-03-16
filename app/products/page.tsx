@@ -1,9 +1,9 @@
 import Navbar from "../components/Navbar";
 import PageBanner from "../components/PageBanner";
-import ProductListingSection from "../components/ProductListingSection";
 import ApplicationsSection from "../components/ApplicationsSection";
 import CTASection from "../components/CTASection";
 import Footer from "../components/Footer";
+import ProductListingSection from "../components/ProductListingSection";
 
 export default function ProductsPage() {
   return (

@@ -7,7 +7,7 @@ interface ProductGallerySectionProps {
 
 export default function ProductGallerySection({ images }: ProductGallerySectionProps) {
   return (
-    <section className="w-full py-20" style={{ backgroundColor: '#EEF2F7' }}>
+    <section className="w-full py-20" style={{ backgroundColor: '#DCE8F5' }}>
       <div className="px-8 lg:px-16">
         <div className="text-center mb-12">
           <SectionTitle outlinedText="PRODUCT" solidText="GALLERY" align="center" />

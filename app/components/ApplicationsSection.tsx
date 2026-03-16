@@ -69,7 +69,7 @@ const applications = [
 
 export default function ApplicationsSection() {
   return (
-    <section className="w-full py-20" style={{ backgroundColor: '#EEF2F7' }}>
+    <section className="w-full py-20" style={{ backgroundColor: '#DCE8F5' }}>
       <div className="px-8 lg:px-16">
         <div className="text-center mb-14">
           <SectionTitle
@@ -88,7 +88,7 @@ export default function ApplicationsSection() {
             >
               <div
                 className="w-20 h-20 rounded-full flex items-center justify-center"
-                style={{ backgroundColor: '#EEF2F7', color: '#151C50' }}
+                style={{ backgroundColor: '#DCE8F5', color: '#151C50' }}
               >
                 {app.icon}
               </div>

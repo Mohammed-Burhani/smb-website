@@ -3,6 +3,8 @@ import PageBanner from "../../components/PageBanner";
 import ProductDetailSection from "../../components/ProductDetailSection";
 import ProductTypesSection, { ProductType } from "../../components/ProductTypesSection";
 import ProductFeaturesSection from "../../components/ProductFeaturesSection";
+import ProductGallerySection from "../../components/ProductGallerySection";
+import CTASection from "../../components/CTASection";
 import Footer from "../../components/Footer";
 
 interface ProductPageData {
@@ -19,6 +21,9 @@ interface ProductPageData {
   types: ProductType[];
   featuresImage: string;
   features: string[];
+  galleryImages: string[];
+  ctaTitle: string;
+  ctaDescription: string;
 }
 
 // Placeholder data — will be replaced by Sanity CMS fetch
@@ -51,6 +56,9 @@ const productData: Record<string, ProductPageData> = {
       "Reliable pipe connectivity",
       "Suitable for fabrication and construction systems",
     ],
+    galleryImages: ["/home/infrastructure.png", "/home/prod-1.png", "/home/commitment.png"],
+    ctaTitle: "NEED MILD STEEL ELBOWS FOR YOUR PROJECT?",
+    ctaDescription: "Contact SMB Fitting Industry for reliable supply and competitive pricing on industrial steel fittings.",
   },
   "ms-pipe-fittings": {
     outlinedText: "MS PIPE",
@@ -80,6 +88,9 @@ const productData: Record<string, ProductPageData> = {
       "Suitable for high-pressure applications",
       "Consistent dimensional accuracy",
     ],
+    galleryImages: ["/home/infrastructure.png", "/home/prod-2.png", "/home/commitment.png"],
+    ctaTitle: "NEED MS PIPE FITTINGS FOR YOUR PROJECT?",
+    ctaDescription: "Contact SMB Fitting Industry for reliable supply and competitive pricing on industrial pipe fittings.",
   },
   "steel-pipes-sections": {
     outlinedText: "STEEL PIPES &",
@@ -109,6 +120,9 @@ const productData: Record<string, ProductPageData> = {
       "Consistent length and dimensional tolerance",
       "Bulk supply capability for large projects",
     ],
+    galleryImages: ["/home/infrastructure.png", "/home/prod-3.png", "/home/commitment.png"],
+    ctaTitle: "NEED STEEL PIPES & SECTIONS FOR YOUR PROJECT?",
+    ctaDescription: "Contact SMB Fitting Industry for reliable supply and competitive pricing on structural steel products.",
   },
   "custom-fabricated-components": {
     outlinedText: "CUSTOM FABRICATED",
@@ -138,6 +152,9 @@ const productData: Record<string, ProductPageData> = {
       "Consistent finishing and dimensional accuracy",
       "Fast turnaround for urgent project needs",
     ],
+    galleryImages: ["/home/fabrication.png", "/home/infrastructure.png", "/home/commitment.png"],
+    ctaTitle: "NEED CUSTOM FABRICATED COMPONENTS?",
+    ctaDescription: "Contact SMB Fitting Industry for tailored fabrication solutions and competitive pricing.",
   },
 };
 
@@ -156,6 +173,9 @@ export default async function ProductDetailPage({ params }: Props) {
     detailImage: "/home/banner.png",
     typesOutlinedText: "TYPES", typesSolidText: "OF PRODUCTS",
     types: [], featuresImage: "/home/banner.png", features: [],
+    galleryImages: ["/home/banner.png", "/home/banner.png", "/home/banner.png"],
+    ctaTitle: "LOOKING FOR STEEL FITTINGS FOR YOUR PROJECT?",
+    ctaDescription: "Contact SMB Fitting Industry for reliable supply and competitive pricing.",
   };
 
   return (
@@ -165,6 +185,16 @@ export default async function ProductDetailPage({ params }: Props) {
       <ProductDetailSection outlinedText={data.detailOutlinedText} solidText={data.detailSolidText} description={data.description} image={data.detailImage} />
       <ProductTypesSection outlinedText={data.typesOutlinedText} solidText={data.typesSolidText} types={data.types} />
       <ProductFeaturesSection image={data.featuresImage} features={data.features} />
+      <ProductGallerySection images={data.galleryImages} />
+      <CTASection
+        title={data.ctaTitle}
+        description={data.ctaDescription}
+        buttonText="Request a Quote"
+        buttonLink="/quote"
+        secondaryButtonText="Send Enquiry"
+        secondaryButtonLink="/contact"
+        backgroundImage="/home/cta.png"
+      />
       <Footer />
     </div>
   );
