@@ -14,7 +14,7 @@ export default function SectionTitle({ outlinedText, solidText, align = 'center'
   return (
     <div className={alignmentClass}>
       <h2 
-        className="text-5xl lg:text-6xl font-bold uppercase tracking-wide mb-2"
+        className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-wide mb-2"
         style={{
           WebkitTextStroke: '1px #2E3887',
           color: 'transparent'
@@ -22,7 +22,7 @@ export default function SectionTitle({ outlinedText, solidText, align = 'center'
       >
         {outlinedText}
       </h2>
-      <h3 className="text-3xl lg:text-4xl font-bold uppercase" style={{ color: '#151C50' }}>
+      <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold uppercase" style={{ color: '#151C50' }}>
         {solidText}
       </h3>
     </div>
