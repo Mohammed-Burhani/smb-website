@@ -4,15 +4,17 @@ import ApplicationsSection from "../components/ApplicationsSection";
 import CTASection from "../components/CTASection";
 import Footer from "../components/Footer";
 import ProductListingSection from "../components/ProductListingSection";
-import { client } from "../lib/sanity";
+import { sanityFetch } from "../lib/sanity";
 import { productsListQuery } from "../lib/queries";
 import type { SanityProductListItem } from "../lib/types";
 
-// Revalidate every 60 seconds — picks up Sanity changes without a full rebuild
 export const revalidate = 60;
 
 export default async function ProductsPage() {
-  const products: SanityProductListItem[] = await client.fetch(productsListQuery);
+  const products = await sanityFetch<SanityProductListItem[]>({
+    query: productsListQuery,
+    tags: ['product'],
+  });
 
   return (
     <div className="min-h-screen">

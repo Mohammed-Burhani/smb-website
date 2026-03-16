@@ -7,11 +7,14 @@ import ProductFeaturesSection from "../../components/ProductFeaturesSection";
 import ProductGallerySection from "../../components/ProductGallerySection";
 import CTASection from "../../components/CTASection";
 import Footer from "../../components/Footer";
-import { client, urlFor } from "../../lib/sanity";
+import { sanityFetch, urlFor } from "../../lib/sanity";
 import { productBySlugQuery, productSlugsQuery } from "../../lib/queries";
 import type { SanityProduct } from "../../lib/types";
 
 export const revalidate = 60;
+
+// Allow new slugs added in Sanity to be served without a rebuild
+export const dynamicParams = true;
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -19,7 +22,11 @@ interface Props {
 
 export default async function ProductDetailPage({ params }: Props) {
   const { slug } = await params;
-  const data: SanityProduct | null = await client.fetch(productBySlugQuery, { slug });
+  const data = await sanityFetch<SanityProduct | null>({
+    query: productBySlugQuery,
+    params: { slug },
+    tags: ['product', `product:${slug}`],
+  });
 
   if (!data) notFound();
 
@@ -72,6 +79,9 @@ export default async function ProductDetailPage({ params }: Props) {
 }
 
 export async function generateStaticParams() {
-  const slugs: { slug: string }[] = await client.fetch(productSlugsQuery);
+  const slugs = await sanityFetch<{ slug: string }[]>({
+    query: productSlugsQuery,
+    tags: ['product'],
+  });
   return slugs.map(({ slug }) => ({ slug }));
 }
