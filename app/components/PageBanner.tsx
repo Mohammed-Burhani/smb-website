@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Body, H1, H2 } from "./Typography";
 
 interface PageBannerProps {
   image: string;
@@ -22,19 +23,19 @@ export default function PageBanner({ image, outlinedText, solidText, subtitle }:
       </div>
 
       <div className="relative h-full flex items-center justify-center px-8">
-        <div className="text-center text-white space-y-4 max-w-4xl">
-          <h1
+        <div className="text-center text-white space-y-2 max-w-4xl">
+          <H1
             className="text-5xl lg:text-6xl font-bold tracking-wider"
             style={{ WebkitTextStroke: '1px white', color: 'transparent' }}
           >
             {outlinedText}
-          </h1>
-          <h2 className="text-3xl lg:text-4xl font-bold">
+          </H1>
+          <H2 className="text-3xl lg:text-4xl font-bold text-white">
             {solidText}
-          </h2>
-          <p className="text-xl lg:text-2xl font-light">
+          </H2>
+          <Body className="text-xl lg:text-2xl font-light text-white">
             {subtitle}
-          </p>
+          </Body>
         </div>
       </div>
     </section>
