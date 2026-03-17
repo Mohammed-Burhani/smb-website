@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionTitle from "./SectionTitle";
 import { Body } from "./Typography";
 
@@ -24,15 +25,7 @@ export default function VisionMissionSection() {
           >
             {/* Vision Icon */}
             <div className="mb-6">
-              <svg viewBox="0 0 64 64" fill="none" className="w-12 h-12" style={{ color: '#151C50' }}>
-                <rect x="4" y="36" width="9" height="20" rx="1.5" fill="currentColor"/>
-                <rect x="16" y="26" width="9" height="30" rx="1.5" fill="currentColor"/>
-                <rect x="28" y="18" width="9" height="38" rx="1.5" fill="currentColor"/>
-                <circle cx="50" cy="18" r="11" stroke="currentColor" strokeWidth="2.5" fill="none"/>
-                <circle cx="50" cy="18" r="4.5" fill="currentColor"/>
-                <path d="M50 5 L50 9 M50 27 L50 31 M37 18 L41 18 M59 18 L63 18 M41.1 9.1 L43.9 11.9 M56.1 24.1 L58.9 26.9 M56.1 11.9 L58.9 9.1 M41.1 26.9 L43.9 24.1"
-                  stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-              </svg>
+              <Image src="/about/vision.svg" alt="Vision" width={48} height={48} />
             </div>
 
             <h3
@@ -54,13 +47,7 @@ export default function VisionMissionSection() {
           >
             {/* Mission Icon */}
             <div className="mb-6">
-              <svg viewBox="0 0 64 64" fill="none" className="w-12 h-12" style={{ color: '#151C50' }}>
-                <circle cx="30" cy="36" r="22" stroke="currentColor" strokeWidth="2.5" fill="none"/>
-                <circle cx="30" cy="36" r="14" stroke="currentColor" strokeWidth="2.5" fill="none"/>
-                <circle cx="30" cy="36" r="6" stroke="currentColor" strokeWidth="2.5" fill="none"/>
-                <path d="M46 6 L58 6 L58 18" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-                <path d="M58 6 L36 28" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
-              </svg>
+              <Image src="/about/mission.svg" alt="Mission" width={48} height={48} />
             </div>
 
             <h3

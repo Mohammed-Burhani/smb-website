@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionTitle from "./SectionTitle";
 import { Body } from "./Typography";
 
@@ -6,42 +7,22 @@ export default function CoreValuesSection() {
     {
       title: "Integrity",
       description: "Transparent dealings and ethical business practices.",
-      icon: (
-        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.5">
-          <path d="M32 8L12 18v16c0 12.5 8.5 24.2 20 27 11.5-2.8 20-14.5 20-27V18L32 8z" />
-        </svg>
-      )
+      icon: "/about/integrity.svg"
     },
     {
       title: "Quality",
       description: "Consistent inspection and material standards.",
-      icon: (
-        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.5">
-          <circle cx="32" cy="32" r="24" />
-          <path d="M22 32l6 6 14-14" />
-        </svg>
-      )
+      icon: "/about/quality.svg"
     },
     {
       title: "Reliability",
       description: "Ensuring on-time production and reliable delivery.",
-      icon: (
-        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.5">
-          <circle cx="32" cy="32" r="24" />
-          <path d="M32 16v16l10 6" />
-        </svg>
-      )
+      icon: "/about/reliability.svg"
     },
     {
       title: "Focus",
       description: "Building long-term partnerships with clients.",
-      icon: (
-        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2.5">
-          <path d="M20 48c-4-4-4-8-4-12 0-8 6-14 14-14h8c8 0 14 6 14 14 0 4 0 8-4 12" />
-          <circle cx="22" cy="20" r="6" />
-          <circle cx="42" cy="20" r="6" />
-        </svg>
-      )
+      icon: "/about/focus.svg"
     }
   ];
 
@@ -72,8 +53,8 @@ export default function CoreValuesSection() {
                   className="bg-white border-2 rounded-lg p-8 flex items-start gap-6 hover:shadow-lg transition-shadow"
                   style={{ borderColor: '#D1D5DB' }}
                 >
-                  <div className="w-16 h-16 flex-shrink-0" style={{ color: '#151C50' }}>
-                    {value.icon}
+                  <div className="w-16 h-16 flex-shrink-0">
+                    <Image src={value.icon} alt={value.title} width={64} height={64} />
                   </div>
                   <div>
                     <h4 className="text-xl font-bold mb-2" style={{ color: '#151C50' }}>

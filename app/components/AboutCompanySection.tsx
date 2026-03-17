@@ -13,7 +13,7 @@ export default function AboutCompanySection() {
               {/* Display steel fittings in a grid */}
               <div className="col-span-5 relative h-[400px] rounded-lg overflow-hidden">
                 <Image 
-                  src="/home/about.png" 
+                  src="/about/about.png" 
                   alt="Steel fittings and elbows"
                   fill
                   className="object-cover"

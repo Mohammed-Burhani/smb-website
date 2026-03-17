@@ -18,7 +18,7 @@ export default function ManufacturingApproachSection() {
           <div className="relative">
             <div className="relative h-[400px] lg:h-[500px] w-full rounded-lg overflow-hidden shadow-xl">
               <Image 
-                src="/home/fabrication.png" 
+                src="/about/approach.png" 
                 alt="Manufacturing process"
                 fill
                 className="object-cover"
