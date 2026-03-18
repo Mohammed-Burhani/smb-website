@@ -16,7 +16,7 @@ export default function InfrastructureSetupSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left - Image */}
           <div className="relative h-[460px] w-full rounded-2xl overflow-hidden shadow-lg">
-            <Image src="/home/infrastructure.png" alt="Manufacturing facility" fill className="object-cover" />
+            <Image src="/quality/infrastructure.png" alt="Manufacturing facility" fill className="object-cover" />
           </div>
 
           {/* Right - Content */}

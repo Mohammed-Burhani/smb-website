@@ -19,7 +19,7 @@ export default function PageBanner({ image, outlinedText, solidText, subtitle }:
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/70" />
       </div>
 
       <div className="relative h-full flex items-center justify-center px-8">

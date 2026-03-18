@@ -43,7 +43,7 @@ export default function QualityCommitmentSection() {
 
           {/* Right - Image */}
           <div className="relative h-[460px] w-full rounded-2xl overflow-hidden shadow-lg">
-            <Image src="/home/commitment.png" alt="Quality inspection" fill className="object-cover" />
+            <Image src="/quality/commitment.png" alt="Quality inspection" fill className="object-cover" />
           </div>
         </div>
       </div>

@@ -39,7 +39,7 @@ export default function SafeHandlingSection() {
 
           {/* Right - Image */}
           <div className="relative h-[460px] w-full rounded-2xl overflow-hidden shadow-lg">
-            <Image src="/home/infrastructure.png" alt="Structured storage facility" fill className="object-cover" />
+            <Image src="/quality/safe-handling.png" alt="Structured storage facility" fill className="object-cover" />
           </div>
         </div>
       </div>

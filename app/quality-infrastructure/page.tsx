@@ -12,7 +12,7 @@ export default function QualityInfrastructurePage() {
     <div className="min-h-screen">
       <Navbar />
       <PageBanner
-        image="/home/commitment.png"
+        image="/quality/banner.png"
         outlinedText="QUALITY"
         solidText="& INFRASTRUCTURE"
         subtitle="Engineered for Precision. Built for Reliability."
