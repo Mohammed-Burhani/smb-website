@@ -11,7 +11,7 @@ export default function IndustriesPage() {
     <div className="min-h-screen">
       <Navbar />
       <PageBanner
-        image="/home/engineering.png"
+        image="/industries/banner.png"
         outlinedText="INDUSTRIES"
         solidText="WE SERVE"
         subtitle="Supporting Diverse Industrial & Infrastructure Sectors"

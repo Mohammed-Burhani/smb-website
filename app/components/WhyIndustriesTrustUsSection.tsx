@@ -1,44 +1,22 @@
+import Image from "next/image";
 import { Body } from "./Typography";
 
 const reasons = [
   {
     title: "CONSISTENT MANUFACTURING STANDARDS",
-    icon: (
-      <svg viewBox="0 0 48 48" fill="currentColor" className="w-10 h-10">
-        <path d="M24 4L6 13v13c0 11.1 7.7 21.5 18 24 10.3-2.5 18-12.9 18-24V13L24 4z"/>
-      </svg>
-    ),
+    icon: "/industries/manufacturing-standards.svg",
   },
   {
     title: "RELIABLE LOCAL SUPPLY NETWORK",
-    icon: (
-      <svg viewBox="0 0 48 48" fill="currentColor" className="w-10 h-10">
-        <rect x="2" y="18" width="28" height="18" rx="2"/>
-        <path d="M30 24h8l8 8v8H30V24z"/>
-        <circle cx="10" cy="38" r="4"/>
-        <circle cx="36" cy="38" r="4"/>
-        <path d="M6 22V14h20v4"/>
-      </svg>
-    ),
+    icon: "/industries/supply-network.svg",
   },
   {
     title: "STRUCTURED INVENTORY HANDLING",
-    icon: (
-      <svg viewBox="0 0 48 48" fill="currentColor" className="w-10 h-10">
-        <path d="M24 4L4 14v4l20 10 20-10v-4L24 4z"/>
-        <path d="M4 28l20 10 20-10" stroke="currentColor" strokeWidth="2" fill="none"/>
-        <path d="M4 36l20 10 20-10" stroke="currentColor" strokeWidth="2" fill="none"/>
-      </svg>
-    ),
+    icon: "/industries/inventory.svg",
   },
   {
     title: "RESPONSIVE ORDER PROCESSING",
-    icon: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-10 h-10">
-        <circle cx="24" cy="24" r="20"/>
-        <path d="M24 12v12l8 4" strokeLinecap="round"/>
-      </svg>
-    ),
+    icon: "/industries/responsive.svg",
   },
 ];
 
@@ -71,7 +49,7 @@ export default function WhyIndustriesTrustUsSection() {
                 className="bg-white rounded-2xl px-8 py-5 flex items-center gap-6 shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="flex-shrink-0" style={{ color: '#151C50' }}>
-                  {reason.icon}
+                  <Image src={reason.icon} alt={reason.title} width={40} height={40} />
                 </div>
                 <h4 className="text-base font-bold tracking-wide" style={{ color: '#151C50' }}>
                   {reason.title}
