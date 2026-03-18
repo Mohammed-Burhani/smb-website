@@ -13,8 +13,8 @@ export default function ProductFeaturesSection({ image, features }: ProductFeatu
       <div className="px-8 lg:px-16">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left - Image */}
-          <div className="relative h-[420px] w-full rounded-2xl overflow-hidden shadow-lg">
-            <Image src={image} alt="Product features" fill className="object-cover" />
+          <div className="relative h-full w-full rounded-2xl overflow-hidden shadow-lg">
+            <Image src={image} alt="Product features" width={500} height={500} className="object-cover w-full h-full" />
           </div>
 
           {/* Right - Features */}

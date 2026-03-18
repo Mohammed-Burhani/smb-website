@@ -20,7 +20,7 @@ export default async function ProductsPage() {
     <div className="min-h-screen">
       <Navbar />
       <PageBanner
-        image="/home/banner.png"
+        image="/products/banner.png"
         outlinedText="OUR PRODUCT"
         solidText="RANGE"
         subtitle="Reliable Mild Steel Fittings & Structural Components"

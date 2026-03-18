@@ -1,42 +1,30 @@
+import { Building2, Construction } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 
 const applications = [
   {
     label: "Construction\nProjects",
     icon: (
-      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2" className="w-12 h-12">
-        <rect x="8" y="40" width="16" height="20" rx="1"/>
-        <rect x="28" y="28" width="16" height="32" rx="1"/>
-        <path d="M4 60h56"/>
-        <path d="M48 20l8 8H40l8-8z"/>
-        <line x1="48" y1="20" x2="48" y2="60"/>
-        <path d="M12 40V28l8-8"/>
-        <line x1="20" y1="20" x2="20" y2="28"/>
-      </svg>
+      <Construction size={32} />
     ),
   },
   {
     label: "Fabrication\nWorkshops",
     icon: (
-      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2" className="w-12 h-12">
-        <path d="M12 52c0-4 4-8 8-8s8 4 8 8"/>
-        <circle cx="20" cy="36" r="6"/>
-        <path d="M38 20l16-8-4 16-6-4-6 8-8-8 6-6 2 2z"/>
-        <line x1="30" y1="34" x2="38" y2="26"/>
-      </svg>
+      <Building2 size={32} />
     ),
   },
   {
     label: "Industrial\nPlants",
     icon: (
       <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2" className="w-12 h-12">
-        <rect x="4" y="32" width="56" height="28" rx="1"/>
-        <rect x="10" y="40" width="8" height="12"/>
-        <rect x="28" y="40" width="8" height="12"/>
-        <rect x="46" y="40" width="8" height="12"/>
-        <path d="M8 32V20l12 12V20l12 12V20l12 12V20l12 12"/>
-        <rect x="24" y="8" width="16" height="12" rx="1"/>
-        <line x1="32" y1="8" x2="32" y2="4"/>
+        <rect x="4" y="32" width="56" height="28" rx="1" />
+        <rect x="10" y="40" width="8" height="12" />
+        <rect x="28" y="40" width="8" height="12" />
+        <rect x="46" y="40" width="8" height="12" />
+        <path d="M8 32V20l12 12V20l12 12V20l12 12V20l12 12" />
+        <rect x="24" y="8" width="16" height="12" rx="1" />
+        <line x1="32" y1="8" x2="32" y2="4" />
       </svg>
     ),
   },
@@ -44,12 +32,12 @@ const applications = [
     label: "Pipeline\nInstallations",
     icon: (
       <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2" className="w-12 h-12">
-        <path d="M4 32h56"/>
-        <circle cx="32" cy="32" r="8"/>
-        <path d="M24 24v-8M40 24v-8M24 48v-8M40 48v-8"/>
-        <circle cx="24" cy="14" r="3"/>
-        <circle cx="40" cy="14" r="3"/>
-        <path d="M8 28v8M56 28v8"/>
+        <path d="M4 32h56" />
+        <circle cx="32" cy="32" r="8" />
+        <path d="M24 24v-8M40 24v-8M24 48v-8M40 48v-8" />
+        <circle cx="24" cy="14" r="3" />
+        <circle cx="40" cy="14" r="3" />
+        <path d="M8 28v8M56 28v8" />
       </svg>
     ),
   },
@@ -57,11 +45,11 @@ const applications = [
     label: "Structural\nFrameworks",
     icon: (
       <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="2" className="w-12 h-12">
-        <rect x="4" y="8" width="12" height="48" rx="2"/>
-        <rect x="48" y="8" width="12" height="48" rx="2"/>
-        <rect x="16" y="12" width="32" height="8" rx="1"/>
-        <rect x="16" y="44" width="32" height="8" rx="1"/>
-        <line x1="16" y1="32" x2="48" y2="32"/>
+        <rect x="4" y="8" width="12" height="48" rx="2" />
+        <rect x="48" y="8" width="12" height="48" rx="2" />
+        <rect x="16" y="12" width="32" height="8" rx="1" />
+        <rect x="16" y="44" width="32" height="8" rx="1" />
+        <line x1="16" y1="32" x2="48" y2="32" />
       </svg>
     ),
   },

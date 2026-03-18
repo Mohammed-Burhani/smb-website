@@ -37,14 +37,15 @@ export default function ProductDetailSection({
 
           {/* Right - Image */}
           <div
-            className="relative h-[420px] w-full rounded-2xl overflow-hidden"
+            className="relative w-full rounded-2xl overflow-hidden"
             style={{ backgroundColor: '#F0F4FC' }}
           >
             <Image
               src={image}
               alt={solidText}
-              fill
-              className="object-contain p-8"
+              width={500}
+              height={500}
+              className="w-full h-full"
             />
           </div>
         </div>

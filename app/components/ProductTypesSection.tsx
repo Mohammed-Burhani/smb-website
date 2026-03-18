@@ -26,12 +26,12 @@ export default function ProductTypesSection({ outlinedText, solidText, types }: 
           {types.map((type, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-6 w-56 flex flex-col items-center gap-4 shadow-sm hover:shadow-md transition-shadow"
+              className="bg-white rounded-2xl p-6 w-56 flex flex-col items-center gap-4 shadow-sm hover:shadow-md transition-shadow h-full"
               style={{ borderBottom: '3px solid #D4A843' }}
             >
-              <div className="relative w-full h-36 rounded-xl overflow-hidden bg-gray-50">
-                <Image src={type.image} alt={type.title} fill className="object-contain p-3" />
-              </div>
+
+              <Image src={type.image} alt={type.title} width={500} height={500} className="w-full h-full" />
+
               <div className="text-center space-y-2">
                 <h4 className="text-sm font-bold" style={{ color: '#151C50' }}>{type.title}</h4>
                 <Body className="text-gray-500 text-xs leading-relaxed">{type.description}</Body>

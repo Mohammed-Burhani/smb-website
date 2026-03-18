@@ -42,8 +42,9 @@ export default function ProductListingSection({ products }: Props) {
                 <Image
                   src={urlFor(product.listingImage).width(600).height(400).url()}
                   alt={product.title}
-                  fill
-                  className="object-cover"
+                  width={500}
+                  height={500}
+                  className="object-cover w-full h-64"
                 />
               </div>
 
