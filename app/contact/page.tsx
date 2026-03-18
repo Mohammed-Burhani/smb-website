@@ -11,7 +11,7 @@ export default function ContactPage() {
     <div className="min-h-screen">
       <Navbar />
       <PageBanner
-        image="/home/banner.png"
+        image="/contact/banner.png"
         outlinedText="CONTACT"
         solidText="US"
         subtitle="Get in Touch for Reliable Steel Fittings & Supply Support"
