@@ -1,7 +1,7 @@
 "use client";
 
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
-import SectionTitle from "./SectionTitle";
+import { useState } from "react";
 import { Body } from "./Typography";
 
 const contactDetails = [
@@ -49,7 +49,33 @@ const productOptions = [
   "Other",
 ];
 
+const defaultForm = { name: "", company: "", phone: "", email: "", product: "", message: "" };
+
 export default function ContactSection() {
+  const [form, setForm] = useState(defaultForm);
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("Failed");
+      setStatus("success");
+      setForm(defaultForm);
+    } catch {
+      setStatus("error");
+    }
+  };
+
   return (
     <section className="w-full py-20" style={{ backgroundColor: '#EEF2F7' }}>
       <div className="px-8 lg:px-16">
@@ -101,51 +127,86 @@ export default function ContactSection() {
               Request a Quote / Send an Inquiry
             </h3>
 
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="text"
-                placeholder="Full Name"
-                required
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm outline-none focus:border-[#151C50] transition-colors"
-              />
-              <input
-                type="text"
-                placeholder="Company Name"
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm outline-none focus:border-[#151C50] transition-colors"
-              />
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                required
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm outline-none focus:border-[#151C50] transition-colors"
-              />
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm outline-none focus:border-[#151C50] transition-colors"
-              />
-              <select
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm text-gray-400 outline-none focus:border-[#151C50] transition-colors appearance-none bg-white"
-                defaultValue=""
-              >
-                <option value="" disabled>Select Your Product Requirement</option>
-                {productOptions.map((opt) => (
-                  <option key={opt} value={opt} className="text-gray-700">{opt}</option>
-                ))}
-              </select>
-              <textarea
-                placeholder="Message"
-                rows={4}
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm outline-none focus:border-[#151C50] transition-colors resize-none"
-              />
-              <button
-                type="submit"
-                className="w-full py-4 text-white font-semibold rounded-lg transition-opacity hover:opacity-90"
-                style={{ backgroundColor: '#151C50' }}
-              >
-                Submit Inquiry
-              </button>
-            </form>
+            {status === "success" ? (
+              <div className="text-center py-12 space-y-3">
+                <p className="text-2xl font-bold" style={{ color: '#151C50' }}>Thank you!</p>
+                <p className="text-gray-500 text-sm">Your inquiry has been sent. We&apos;ll get back to you shortly.</p>
+                <button
+                  onClick={() => setStatus("idle")}
+                  className="mt-4 text-sm underline"
+                  style={{ color: '#151C50' }}
+                >
+                  Send another inquiry
+                </button>
+              </div>
+            ) : (
+              <form className="space-y-4" onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Full Name *"
+                  required
+                  value={form.name}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm outline-none focus:border-[#151C50] transition-colors"
+                />
+                <input
+                  type="text"
+                  name="company"
+                  placeholder="Company Name"
+                  value={form.company}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm outline-none focus:border-[#151C50] transition-colors"
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number *"
+                  required
+                  value={form.phone}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm outline-none focus:border-[#151C50] transition-colors"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  value={form.email}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm outline-none focus:border-[#151C50] transition-colors"
+                />
+                <select
+                  name="product"
+                  value={form.product}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm text-gray-400 outline-none focus:border-[#151C50] transition-colors appearance-none bg-white"
+                >
+                  <option value="" disabled>Select Your Product Requirement</option>
+                  {productOptions.map((opt) => (
+                    <option key={opt} value={opt} className="text-gray-700">{opt}</option>
+                  ))}
+                </select>
+                <textarea
+                  name="message"
+                  placeholder="Message"
+                  rows={4}
+                  value={form.message}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm outline-none focus:border-[#151C50] transition-colors resize-none"
+                />
+                {status === "error" && (
+                  <p className="text-red-500 text-sm text-center">Something went wrong. Please try again.</p>
+                )}
+                <button
+                  type="submit"
+                  disabled={status === "loading"}
+                  className="w-full py-4 text-white font-semibold rounded-lg transition-opacity hover:opacity-90 disabled:opacity-60"
+                  style={{ backgroundColor: '#151C50' }}
+                >
+                  {status === "loading" ? "Sending..." : "Submit Inquiry"}
+                </button>
+              </form>
+            )}
           </div>
         </div>
       </div>
