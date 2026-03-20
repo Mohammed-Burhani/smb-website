@@ -1,4 +1,4 @@
 {
-  "installCommand": "bun install",
+  "installCommand": "npm install --legacy-peer-deps",
   "buildCommand": "bun run build"
 }
