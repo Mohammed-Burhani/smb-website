@@ -8,7 +8,7 @@ import { sanityFetch } from "../lib/sanity";
 import { productsListQuery } from "../lib/queries";
 import type { SanityProductListItem } from "../lib/types";
 
-export const revalidate = 60;
+export const revalidate = 0;
 
 export default async function ProductsPage() {
   const products = await sanityFetch<SanityProductListItem[]>({

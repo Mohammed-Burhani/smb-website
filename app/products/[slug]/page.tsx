@@ -11,7 +11,7 @@ import { sanityFetch, urlFor } from "../../lib/sanity";
 import { productBySlugQuery, productSlugsQuery } from "../../lib/queries";
 import type { SanityProduct } from "../../lib/types";
 
-export const revalidate = 60;
+export const revalidate = 0;
 
 // Allow new slugs added in Sanity to be served without a rebuild
 export const dynamicParams = true;

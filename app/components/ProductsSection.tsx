@@ -8,7 +8,7 @@ export default function ProductsSection() {
     {
       title: "MILD STEEL ELBOWS",
       description: "High-strength MS elbows designed for structural and pipeline applications.",
-      image: "/home/prod-1.png",
+      image: "/home/prod-1.jpeg",
     },
     {
       title: "MS PIPE FITTINGS",
@@ -42,13 +42,13 @@ export default function ProductsSection() {
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
             >
               {/* Product Image */}
-              <div className="relative h- bg-gray-200 overflow-hidden">
+              <div className="relative h-128 bg-gray-200 overflow-hidden">
                 <Image 
                   src={product.image} 
                   alt={product.title}
                   width={1000}
                   height={1000}
-                  className="w-full h- object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
 
