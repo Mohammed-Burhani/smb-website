@@ -36,7 +36,7 @@ export default function CommitmentSection() {
             />
 
             <Body>
-              We maintain strict quality control measures throughout manufacturing and sourcing processes. From material selection to final inspection, every product undergoes dimensional accuracy checks and finishing evaluation to ensure durability and performance.
+              We maintain strict quality control measures throughout manufacturing and sourcing processes. From material selection to final inspection, every product undergoes dimensional accuracy checks and finishing evaluation to ensure seamless durability and performance.
             </Body>
 
             <ul className="space-y-3">

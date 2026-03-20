@@ -26,7 +26,7 @@ export default function ProductListingSection({ products }: Props) {
               and structural steel components used in construction, fabrication, and industrial infrastructure.
             </Body>
             <Body className="text-gray-600">
-              Our products are designed to provide durability, dimensional accuracy, and dependable
+              Our products are designed to provide durability, dimensional accuracy, and seamless
               performance in demanding environments. From elbows and pipe fittings to structural steel
               sections, we ensure reliable supply for industrial requirements.
             </Body>

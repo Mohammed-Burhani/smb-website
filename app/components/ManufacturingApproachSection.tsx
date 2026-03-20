@@ -36,7 +36,7 @@ export default function ManufacturingApproachSection() {
 
             <Body className="text-gray-700 leading-relaxed">
               We follow disciplined production practices, efficient workflow, and structural flexibility. 
-              From raw material procurement to final inspection, every stage follows systematic quality checks.
+              From raw material procurement to final inspection, every stage follows systematic quality checks for seamless manufacturing output.
             </Body>
 
             <div className="space-y-3">

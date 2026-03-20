@@ -21,7 +21,7 @@ export default function SafeHandlingSection() {
             <Body className="text-gray-600 leading-relaxed">
               Proper handling and systematic storage play an important role in preserving product
               quality. We ensure that finished goods are arranged in an organized manner to prevent
-              surface damage and maintain dimensional integrity until dispatch.
+              surface damage and maintain dimensional integrity for seamless dispatch.
             </Body>
 
             <div className="space-y-3">
