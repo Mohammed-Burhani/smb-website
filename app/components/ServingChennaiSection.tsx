@@ -12,7 +12,7 @@ export default function ServingChennaiSection() {
 
             <Body className="text-gray-700 font-semibold leading-relaxed">
               Located in Tondiarpet, SMB Fitting Industry is strategically positioned to support
-              Chennai's industrial and construction hubs. Our proximity enables faster dispatch,
+              Chennai's industrial hubs. Our proximity enables faster dispatch,
               flexible order coordination, and dependable service support for ongoing projects.
             </Body>
 

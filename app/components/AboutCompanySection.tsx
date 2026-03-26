@@ -38,7 +38,7 @@ export default function AboutCompanySection() {
               
               <Body className="text-gray-700 leading-relaxed">
                 With a strong focus on quality, reliability, and customer satisfaction, we support 
-                construction, fabrication, and industrial sectors with consistent product supply and 
+                industrial sectors with consistent product supply and 
                 consistent quality standards.
               </Body>
 

@@ -23,7 +23,7 @@ export default function ProductListingSection({ products }: Props) {
           <div className="max-w-3xl mx-auto space-y-3">
             <Body className="text-gray-600">
               SMB Fitting Industry manufactures and supplies high-quality mild steel pipe fittings
-              and structural steel components used in construction, fabrication, and industrial infrastructure.
+              and structural steel components used in industrial infrastructure.
             </Body>
             <Body className="text-gray-600">
               Our products are designed to provide durability, dimensional accuracy, and seamless

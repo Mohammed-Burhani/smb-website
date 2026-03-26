@@ -7,7 +7,7 @@ export default function HeroSection() {
     {
       icon: "/home/icons/in-house.svg",
       title: "In-House Manufacturing",
-      description: "Precision fabrication with controlled quality standards.",
+      description: "Precision manufacturing with controlled quality standards.",
     },
     {
       icon: "/home/icons/quality-assured.svg",
@@ -46,7 +46,7 @@ export default function HeroSection() {
         <div className="relative h-full px-8 lg:px-16 flex items-center w-full">
           <div className="w-full 2xl:max-w-6xl space-y-6">
             <H1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-              EXCLUSIVE CUSTOM-MADE SEAMLESS MS ELBOWS & FITTINGS
+              EXCLUSIVE CUSTOM-MADE SEAMLESS CS / SS ELBOWS & FITTINGS
             </H1>
             
             <p className="text-lg lg:text-xl font-semibold" style={{ color: '#151C50' }}>

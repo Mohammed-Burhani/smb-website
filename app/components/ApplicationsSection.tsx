@@ -1,19 +1,7 @@
-import { Building2, Construction } from "lucide-react";
+import { Building2 } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 
 const applications = [
-  {
-    label: "Construction\nProjects",
-    icon: (
-      <Construction size={32} />
-    ),
-  },
-  {
-    label: "Fabrication\nWorkshops",
-    icon: (
-      <Building2 size={32} />
-    ),
-  },
   {
     label: "Industrial\nPlants",
     icon: (
@@ -51,6 +39,12 @@ const applications = [
         <rect x="16" y="44" width="32" height="8" rx="1" />
         <line x1="16" y1="32" x2="48" y2="32" />
       </svg>
+    ),
+  },
+  {
+    label: "Manufacturing\nUnits",
+    icon: (
+      <Building2 size={32} />
     ),
   },
 ];

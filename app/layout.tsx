@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "SMB Fitting Industry - Custom MS Elbows & Fittings",
-  description: "Trusted manufacturer & supplier of custom-made seamless MS elbows & fittings in Chennai for industrial applications",
+  title: "SMB Fitting Industry - Custom CS / SS Elbows & Fittings",
+  description: "Trusted manufacturer & supplier of custom-made seamless CS / SS elbows & fittings in Chennai for industrial applications",
 };
 
 export default function RootLayout({

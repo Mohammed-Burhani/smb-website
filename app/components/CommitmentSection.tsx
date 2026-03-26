@@ -4,7 +4,7 @@ import { Body } from "./Typography";
 
 export default function CommitmentSection() {
   const commitments = [
-    "Precision Fabrication",
+    "Precision Manufacturing",
     "Quality Material Sourcing",
     "Skilled Workforce",
     "Structured Storage & Dispatch",

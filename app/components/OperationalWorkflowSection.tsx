@@ -10,7 +10,7 @@ const steps = [
   },
   {
     number: "2",
-    label: "Fabrication\n& Forming",
+    label: "Manufacturing\n& Forming",
     borderColor: "#4CAF50",
     icon: "/quality/fabcrication.svg",
   },

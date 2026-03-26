@@ -43,9 +43,9 @@ const contactDetails = [
 
 const productOptions = [
   "Mild Steel Elbows",
-  "MS Pipe Fittings",
+  "CS / SS Pipe Fittings",
   "Steel Pipes & Sections",
-  "Custom Fabricated Components",
+  "Custom Components",
   "Other",
 ];
 

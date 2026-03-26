@@ -7,17 +7,17 @@ export default function ProductsSection() {
   const products = [
     {
       title: "MILD STEEL ELBOWS",
-      description: "High-strength MS elbows designed for structural and pipeline applications.",
+      description: "High-strength CS / SS elbows designed for structural and pipeline applications.",
       image: "/home/prod-1.jpeg",
     },
     {
-      title: "MS PIPE FITTINGS",
+      title: "CS / SS PIPE FITTINGS",
       description: "Comprehensive range of couplings, bends, reducers and connectors.",
       image: "/home/prod-2.png",
     },
     {
       title: "STEEL PIPES & SECTIONS",
-      description: "Reliable steel pipes and square sections for industrial fabrication.",
+      description: "Reliable steel pipes and square sections for industrial applications.",
       image: "/home/prod-3.png",
     },
   ];

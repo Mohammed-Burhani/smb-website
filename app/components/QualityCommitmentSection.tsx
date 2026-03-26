@@ -27,7 +27,7 @@ export default function QualityCommitmentSection() {
               </Body>
               <Body className="text-gray-600 leading-relaxed">
                 From raw material inspection to final finishing, our team follows structured evaluation
-                methods to deliver fittings that perform reliably and seamlessly in construction and industrial applications.
+                methods to deliver fittings that perform reliably and seamlessly in industrial applications.
               </Body>
             </div>
 

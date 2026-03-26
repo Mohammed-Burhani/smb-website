@@ -25,7 +25,7 @@ export default function InfrastructureSetupSection() {
 
             <Body className="text-gray-600 leading-relaxed">
               Our operational setup is designed to support efficient production and systematic
-              order handling. Equipped with essential fabrication tools and organized material
+              order handling. Equipped with essential manufacturing tools and organized material
               storage systems, we maintain a seamless workflow from manufacturing to dispatch.
             </Body>
 

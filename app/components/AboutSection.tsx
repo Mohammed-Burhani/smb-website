@@ -31,7 +31,7 @@ export default function AboutSection() {
             {/* Description */}
             <div className="space-y-4">
               <Body>
-                SMB Fitting Industry is a Chennai-based manufacturer and supplier specializing in mild steel elbows, pipe fittings, and structural steel components. With a strong focus on quality, reliability, and customer satisfaction, we support construction, fabrication, and industrial sectors with consistent product standards.
+                SMB Fitting Industry is a Chennai-based manufacturer and supplier specializing in mild steel elbows, pipe fittings, and structural steel components. With a strong focus on quality, reliability, and customer satisfaction, we support industrial sectors with consistent product standards.
               </Body>
               
               <Body>

@@ -4,18 +4,13 @@ import { Body } from "./Typography";
 
 const industries = [
   {
-    title: "CONSTRUCTION",
-    description: "Our mild steel fittings and structural components support pipelines and frameworks in residential, commercial, and infrastructure projects, ensuring safe and durable construction.",
-    icon: "/industries/construction.svg",
-  },
-  {
     title: "OIL AND GAS",
     description: "Steel pipe fittings and elbows are essential for pipeline routing and flow control. Our products support energy and processing sectors where reliability and precision are critical.",
     icon: "/industries/oil-gas.svg",
   },
   {
     title: "ENGINEERING",
-    description: "Engineering units depend on precise steel components for custom structures and assemblies. We supply consistent-quality fittings that integrate smoothly into fabrication processes.",
+    description: "Engineering units depend on precise steel components for custom structures and assemblies. We supply consistent-quality fittings that integrate smoothly into manufacturing processes.",
     icon: "/industries/engineering.svg",
   },
   {
@@ -30,7 +25,7 @@ const industries = [
   },
   {
     title: "STRUCTURAL",
-    description: "Structural steel contractors rely on strong, dimensionally accurate components. Our products support framework fabrication and assembly.",
+    description: "Structural steel contractors rely on strong, dimensionally accurate components. Our products support framework assembly and installation.",
     icon: "/industries/structural.svg",
   },
 ];
