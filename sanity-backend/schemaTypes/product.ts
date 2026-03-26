@@ -123,6 +123,38 @@ export const product = defineType({
       ],
     }),
 
+    // Specifications section
+    defineField({
+      name: 'specificationsOutlinedText',
+      title: 'Specifications Section Outlined Text',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'specificationsSolidText',
+      title: 'Specifications Section Solid Text',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'specifications',
+      title: 'Specifications',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            defineField({ name: 'feature', title: 'Feature', type: 'string', validation: (Rule) => Rule.required() }),
+            defineField({ name: 'description', title: 'Description', type: 'string', validation: (Rule) => Rule.required() }),
+          ],
+          preview: {
+            select: { title: 'feature', subtitle: 'description' },
+          },
+        },
+      ],
+      validation: (Rule) => Rule.required().min(1),
+    }),
+
     // Features section
     defineField({
       name: 'featuresImage',

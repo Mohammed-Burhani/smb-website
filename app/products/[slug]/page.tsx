@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar";
 import PageBanner from "../../components/PageBanner";
 import ProductDetailSection from "../../components/ProductDetailSection";
 import ProductTypesSection from "../../components/ProductTypesSection";
+import ProductSpecificationsSection from "../../components/ProductSpecificationsSection";
 import ProductFeaturesSection from "../../components/ProductFeaturesSection";
 import ProductGallerySection from "../../components/ProductGallerySection";
 import CTASection from "../../components/CTASection";
@@ -61,6 +62,11 @@ export default async function ProductDetailPage({ params }: Props) {
         outlinedText={data.typesOutlinedText}
         solidText={data.typesSolidText}
         types={types}
+      />
+      <ProductSpecificationsSection
+        outlinedText={data.specificationsOutlinedText}
+        solidText={data.specificationsSolidText}
+        specifications={data.specifications}
       />
       <ProductFeaturesSection image={featuresImageUrl} features={data.features} />
       <ProductGallerySection images={galleryImageUrls} />

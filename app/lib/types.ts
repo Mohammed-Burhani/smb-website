@@ -14,6 +14,11 @@ export interface SanityProductType {
   image: SanityImageSource
 }
 
+export interface SanitySpecification {
+  feature: string
+  description: string
+}
+
 export interface SanityProduct {
   _id: string
   title: string
@@ -29,6 +34,9 @@ export interface SanityProduct {
   typesOutlinedText: string
   typesSolidText: string
   types: SanityProductType[]
+  specificationsOutlinedText: string
+  specificationsSolidText: string
+  specifications: SanitySpecification[]
   featuresImage: SanityImageSource
   features: string[]
   galleryImages: SanityImageSource[]

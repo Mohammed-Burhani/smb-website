@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import SectionTitle from "./SectionTitle";
 import { Body } from "./Typography";
 
@@ -26,16 +27,27 @@ export default function ProductTypesSection({ outlinedText, solidText, types }: 
           {types.map((type, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-6 w-56 flex flex-col items-center gap-4 shadow-sm hover:shadow-md transition-shadow h-full"
+              className="bg-white rounded-2xl p-6 w-56 flex flex-col items-center gap-4 shadow-sm hover:shadow-md transition-shadow"
               style={{ borderBottom: '3px solid #D4A843' }}
             >
 
               <Image src={type.image} alt={type.title} width={500} height={500} className="w-full h-full" />
 
-              <div className="text-center space-y-2">
+              <div className="text-center space-y-2 grow">
                 <h4 className="text-sm font-bold" style={{ color: '#151C50' }}>{type.title}</h4>
                 <Body className="text-gray-500 text-xs leading-relaxed">{type.description}</Body>
               </div>
+
+              <Link 
+                href="/contact"
+                className="w-full text-center px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
+                style={{ 
+                  backgroundColor: '#D4A843',
+                  color: 'white'
+                }}
+              >
+                Send Enquiry
+              </Link>
             </div>
           ))}
         </div>

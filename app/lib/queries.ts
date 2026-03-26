@@ -32,6 +32,12 @@ export const productBySlugQuery = groq`
       description,
       image,
     },
+    specificationsOutlinedText,
+    specificationsSolidText,
+    specifications[] {
+      feature,
+      description,
+    },
     featuresImage,
     features,
     galleryImages,
