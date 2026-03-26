@@ -34,9 +34,9 @@ export interface SanityProduct {
   typesOutlinedText: string
   typesSolidText: string
   types: SanityProductType[]
-  specificationsOutlinedText: string
-  specificationsSolidText: string
-  specifications: SanitySpecification[]
+  specificationsOutlinedText?: string
+  specificationsSolidText?: string
+  specifications?: SanitySpecification[]
   featuresImage: SanityImageSource
   features: string[]
   galleryImages: SanityImageSource[]

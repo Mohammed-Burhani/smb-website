@@ -63,11 +63,13 @@ export default async function ProductDetailPage({ params }: Props) {
         solidText={data.typesSolidText}
         types={types}
       />
-      <ProductSpecificationsSection
-        outlinedText={data.specificationsOutlinedText}
-        solidText={data.specificationsSolidText}
-        specifications={data.specifications}
-      />
+      {data.specifications && data.specifications.length > 0 && (
+        <ProductSpecificationsSection
+          outlinedText={data.specificationsOutlinedText || "RELIABLE"}
+          solidText={data.specificationsSolidText || "SPECIFICATIONS"}
+          specifications={data.specifications}
+        />
+      )}
       <ProductFeaturesSection image={featuresImageUrl} features={data.features} />
       <ProductGallerySection images={galleryImageUrls} />
       <CTASection

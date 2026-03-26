@@ -128,17 +128,16 @@ export const product = defineType({
       name: 'specificationsOutlinedText',
       title: 'Specifications Section Outlined Text',
       type: 'string',
-      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'specificationsSolidText',
       title: 'Specifications Section Solid Text',
       type: 'string',
-      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'specifications',
       title: 'Specifications',
+      description: 'Optional specifications table. Leave empty to hide this section.',
       type: 'array',
       of: [
         {
@@ -152,7 +151,6 @@ export const product = defineType({
           },
         },
       ],
-      validation: (Rule) => Rule.required().min(1),
     }),
 
     // Features section

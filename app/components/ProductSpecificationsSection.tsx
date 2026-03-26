@@ -16,6 +16,11 @@ export default function ProductSpecificationsSection({
   solidText, 
   specifications 
 }: ProductSpecificationsSectionProps) {
+  // Don't render if no specifications
+  if (!specifications || specifications.length === 0) {
+    return null;
+  }
+
   return (
     <section className="w-full bg-white py-20">
       <div className="px-8 lg:px-16">
