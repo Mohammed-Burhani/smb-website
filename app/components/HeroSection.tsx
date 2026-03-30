@@ -28,28 +28,30 @@ export default function HeroSection() {
 
   return (
     <section className="relative w-full">
-      {/* Hero Background with Image */}
+      {/* Hero Background with Video */}
       <div className="relative w-full h-[600px]">
-        {/* Background Image */}
+        {/* Background Video */}
         <div className="absolute inset-0">
-          <Image
-            src="/home/banner.png"
-            alt="Steel fittings and elbows"
-            width={1000}
-            height={1000}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
             className="w-full h-full object-cover"
-            priority
-          />
+          >
+            <source src="/videos/video-1.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-black/40" />
         </div>
         
         {/* Hero Content */}
         <div className="relative h-full px-8 lg:px-16 flex items-center w-full">
           <div className="w-full 2xl:max-w-6xl space-y-6">
-            <H1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+            <H1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white">
               EXCLUSIVE CUSTOM-MADE SEAMLESS CS / SS ELBOWS & FITTINGS
             </H1>
             
-            <p className="text-lg lg:text-xl font-semibold" style={{ color: '#151C50' }}>
+            <p className="text-lg lg:text-xl font-semibold text-white">
               Trusted Manufacturer & Supplier in Chennai for Industrial Applications
             </p>
 

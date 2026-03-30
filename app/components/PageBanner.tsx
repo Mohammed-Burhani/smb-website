@@ -1,24 +1,25 @@
-import Image from "next/image";
 import { Body, H1, H2 } from "./Typography";
 
 interface PageBannerProps {
-  image: string;
+  image?: string;
   outlinedText: string;
   solidText: string;
   subtitle: string;
 }
 
-export default function PageBanner({ image, outlinedText, solidText, subtitle }: PageBannerProps) {
+export default function PageBanner({ outlinedText, solidText, subtitle }: PageBannerProps) {
   return (
     <section className="relative w-full h-[500px]">
       <div className="absolute inset-0">
-        <Image
-          src={image}
-          alt={solidText}
-          fill
-          className="object-cover"
-          priority
-        />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src="/videos/video-1.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-black/60" />
       </div>
 
