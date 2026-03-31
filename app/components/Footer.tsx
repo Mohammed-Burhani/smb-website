@@ -54,11 +54,11 @@ export default function Footer() {
           </nav>
 
           {/* Right - Contact Info */}
-          <div className="text-center md:text-right">
+          <div className="text-end">
             <h4 className="text-base font-bold mb-6 uppercase tracking-wide" style={{ color: 'var(--color-primary)' }}>
               Contact Info
             </h4>
-            <address className="not-italic space-y-2.5 text-sm inline-block text-left" style={{ color: 'var(--color-secondary)' }}>
+            <address className="not-italic space-y-2.5 text-sm inline-block" style={{ color: 'var(--color-secondary)' }}>
               <Body className="leading-relaxed">
                 New No. 404/406, Thiruvottiyur High Road,<br />
                 Tondiarpet, Chennai - 600081,<br />
