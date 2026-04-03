@@ -25,7 +25,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" aria-label="SMB Fitting Industry - Home">
             <Image
-              src="/logo.svg"
+              src="/logo.png"
               alt="SMB Fitting Industry logo"
               width={180}
               height={60}

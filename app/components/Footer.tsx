@@ -20,7 +20,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4 text-center md:text-left">
             <Link href="/" aria-label="SMB Fitting Industry - Home">
               <Image
-                src="/logo.svg"
+                src="/logo.png"
                 alt="SMB Fitting Industry logo"
                 width={180}
                 height={60}
