@@ -27,10 +27,10 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="SMB Fitting Industry logo"
-              width={180}
-              height={60}
+              width={240}
+              height={80}
               priority
-              className="h-14 w-auto"
+              className="h-20 w-auto"
             />
           </Link>
 

@@ -22,9 +22,9 @@ export default function Footer() {
               <Image
                 src="/logo.png"
                 alt="SMB Fitting Industry logo"
-                width={180}
-                height={60}
-                className="h-14 w-auto"
+                width={240}
+                height={80}
+                className="h-20 w-auto"
               />
             </Link>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-secondary)' }}>
