@@ -72,8 +72,8 @@ export default function Footer() {
               </Body>
               <Body>
                 <strong>Email: </strong>
-                <a href="mailto:smbfitting@gmail.com" className="hover:underline" style={{ color: 'var(--color-secondary)' }}>
-                  smbfitting@gmail.com
+                <a href="mailto:yusuf@smbfittingindustry.com" className="hover:underline" style={{ color: 'var(--color-secondary)' }}>
+                  yusuf@smbfittingindustry.com
                 </a>
               </Body>
               <Body>

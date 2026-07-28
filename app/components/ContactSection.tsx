@@ -26,8 +26,8 @@ const contactDetails = [
   },
   {
     title: "Email",
-    lines: ["smbfitting@gmail.com"],
-    href: "mailto:smbfitting@gmail.com",
+    lines: ["yusuf@smbfittingindustry.com"],
+    href: "mailto:yusuf@smbfittingindustry.com",
     icon: (
       <Mail />
     ),
