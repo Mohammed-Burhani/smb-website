@@ -15,7 +15,7 @@ export default function CTASection({
   title, 
   description, 
   buttonText = "Get a Quote",
-  buttonLink = "/quote",
+  buttonLink = "/contact",
   secondaryButtonText,
   secondaryButtonLink = "/contact",
   backgroundImage

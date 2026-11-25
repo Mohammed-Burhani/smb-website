@@ -24,7 +24,7 @@ export default function AboutPage() {
         title="PARTNER WITH A RELIABLE STEEL FITTINGS MANUFACTURER"
         description="Let us support your next project with precision-engineered steel components."
         buttonText="Request a Quote"
-        buttonLink="/quote"
+        buttonLink="/contact"
         secondaryButtonText="Contact Our Team"
         secondaryButtonLink="/contact"
         backgroundImage="/home/cta.png"

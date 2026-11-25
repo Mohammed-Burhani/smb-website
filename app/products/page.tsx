@@ -31,7 +31,7 @@ export default async function ProductsPage() {
         title="LOOKING FOR STEEL FITTINGS FOR YOUR PROJECT?"
         description="Contact SMB Fitting Industry for reliable manufacturing and supply of mild steel fittings."
         buttonText="Request a Quote"
-        buttonLink="/quote"
+        buttonLink="/contact"
         secondaryButtonText="Contact Our Team"
         secondaryButtonLink="/contact"
         backgroundImage="/home/cta.png"

@@ -23,7 +23,7 @@ export default function IndustriesPage() {
         title="LOOKING FOR A RELIABLE STEEL FITTINGS PARTNER?"
         description="Let SMB Fitting Industry support your industry requirements with dependable steel solutions."
         buttonText="Request a Quote"
-        buttonLink="/quote"
+        buttonLink="/contact"
         secondaryButtonText="Contact Our Team"
         secondaryButtonLink="/contact"
         backgroundImage="/home/cta.png"

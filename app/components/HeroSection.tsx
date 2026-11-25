@@ -56,7 +56,7 @@ export default function HeroSection() {
             </p>
 
             <Link
-              href="/quote"
+              href="/contact"
               className="inline-block px-8 py-3.5 text-white text-base font-semibold rounded-md transition-colors"
               style={{ backgroundColor: '#151C50' }}
             >

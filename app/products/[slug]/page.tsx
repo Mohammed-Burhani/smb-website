@@ -76,7 +76,7 @@ export default async function ProductDetailPage({ params }: Props) {
         title={data.ctaTitle}
         description={data.ctaDescription}
         buttonText="Request a Quote"
-        buttonLink="/quote"
+        buttonLink="/contact"
         secondaryButtonText="Send Enquiry"
         secondaryButtonLink="/contact"
         backgroundImage="/home/cta.png"

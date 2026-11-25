@@ -25,7 +25,7 @@ export default function QualityInfrastructurePage() {
         title="PRECISION AND RELIABILITY IN EVERY FITTING"
         description="Partner with SMB Fitting Industry for consistent quality and dependable supply."
         buttonText="Request a Quote"
-        buttonLink="/quote"
+        buttonLink="/contact"
         secondaryButtonText="View Our Products"
         secondaryButtonLink="/products"
         backgroundImage="/home/cta.png"
